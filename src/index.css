@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.custom-font {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  /* background-color: rgb(236, 236, 236); */
+  padding-top: 3.5rem;
+  @apply custom-font;
+}
