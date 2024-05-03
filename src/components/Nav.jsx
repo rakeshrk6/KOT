@@ -33,7 +33,7 @@ function Nav() {
         <div className="flex text-3xl gap-5">
           <NavLink
             to={`/${roomNo}/cart`}
-            className={`${isActive("/cart") ? "text-blue-900" : ""}`}
+            className={`${isActive(`/${roomNo}/cart`) ? "text-blue-900" : ""}`}
           >
             {cart.length > 0 && (
               <div className=" flex absolute h-5 w-5 rounded-full bg-green-600 items-center justify-center text-xs text-white">
@@ -65,7 +65,7 @@ function Nav() {
             onClick={handleOpen}
             to={`/${roomNo}`}
             className={`hover:text-blue-400 cursor-pointer ${
-              isActive("/") ? "text-blue-400" : ""
+              isActive(`/${roomNo}`) ? "text-blue-400" : ""
             }`}
           >
             Home
@@ -74,7 +74,7 @@ function Nav() {
             onClick={handleOpen}
             to={`/${roomNo}/unbilled-order`}
             className={`hover:text-blue-400 cursor-pointer ${
-              isActive("/unbilled-order") ? "text-blue-400" : ""
+              isActive(`/${roomNo}/unbilled-order`) ? "text-blue-400" : ""
             }`}
           >
             Unbilled Order

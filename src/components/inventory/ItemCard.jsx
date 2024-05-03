@@ -32,7 +32,7 @@ const ItemCard = ({ data }) => {
   }
 
   return (
-    <div className=" bg-white mx-5 flex justify-between items-center p-4 outline outline-1 outline-slate-300 rounded-md">
+    <div className=" bg-white mx-5 flex justify-between items-center p-4 outline outline-1 outline-slate-200 rounded-md">
       <div className="flex flex-col gap-2 mr-5">
         <div className=" font-medium text-gray-900">{data.itemName}</div>
         <div className=" text-sm">₹ {data.price}</div>
