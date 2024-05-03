@@ -47,7 +47,7 @@ const Inventory = () => {
   }, [])
 
   return (
-    <div className=" bg-[#ededed] py-5 h-screen">
+    <div className=" bg-[#ededed] py-5 pb-20">
       <div className="mb-5 text-center font-semibold">Room No. {roomNo}</div>
       <div className="mx-5 mb-7">
         <input
