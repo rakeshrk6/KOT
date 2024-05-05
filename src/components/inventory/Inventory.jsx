@@ -33,10 +33,17 @@ const Inventory = () => {
       (item) => regex.test(item.itemName) || regex.test(item.desc)
     )
   }
-
+  async function getData() {
+    const data = await fetch(
+      "https://lenient-gazelle-81.hasura.app/api/rest/users"
+    )
+    const res = await data.json()
+    console.log("res", res)
+  }
   useEffect(() => {
     try {
       addRoomNo(roomId)
+      getData()
       setLoading(true)
       setAllItems(itemsList)
     } catch (error) {
@@ -47,7 +54,7 @@ const Inventory = () => {
   }, [])
 
   return (
-    <div className=" bg-[#ededed] py-5 pb-20">
+    <div className=" bg-[#eeeeee] py-5 pb-[5.6rem]">
       <div className="mb-5 text-center font-semibold">Room No. {roomNo}</div>
       <div className="mx-5 mb-7">
         <input
